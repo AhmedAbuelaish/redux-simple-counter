@@ -8,5 +8,11 @@ const { subscribe, dispatch, getState } = createStore(reducer);
 subscribe(() => render(getState()))
 
 // Dispatch the "INCREMENT" action every time the +1 button is pressed
-const incrementButton = document.getElementById('increment');
-incrementButton.addEventListener('click', e => dispatch({ type: "INCREMENT" }));
+const valueButton = document.getElementsByClassName('valueChange')
+for (let i = 0; i< valueButton.length; i++) {
+    valueButton[i].addEventListener('click', e => dispatch({ type: "VALUE_CHANGE" , stepSize: parseInt(valueButton[i].value, 10)}))
+}
+const colorButton = document.getElementById('counterColor')
+colorButton.addEventListener('change', e => dispatch({ type: "COLOR_CHANGE" , color: colorButton.value}))
+const setValueField = document.getElementById('setValue')
+setValueField.addEventListener('change', e => dispatch({ type: "VALUE_SET" , value: parseInt(setValueField.value, 10)}))

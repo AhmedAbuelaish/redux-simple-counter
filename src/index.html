@@ -9,7 +9,19 @@
 <body>
     <div class="app">
         <h1 id="counterValue">0</h1>
-        <button id="increment">+1</button>
+        <button class="valueChange" value="-5">-5</button>
+        <button class="valueChange" value="-1">-1</button>
+        <button class="valueChange" value="1">+1</button>
+        <button class="valueChange" value="5">+5</button>
+
+        <select id="counterColor">
+            <option value="black">Black</option>
+            <option value="red">Red</option>
+            <option value="green">Green</option>
+            <option value="blue">Blue</option>
+        </select>
+
+        <input type="text" id="setValue">
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.0.1/redux.min.js"></script>
