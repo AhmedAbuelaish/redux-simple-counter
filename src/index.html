@@ -6,7 +6,7 @@
     <title>Simple Counter</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<body>
+<body style="margin: auto;">
     <div class="app">
         <h1 id="counterValue">0</h1>
         <button class="valueChange" value="-5">-5</button>
@@ -14,12 +14,14 @@
         <button class="valueChange" value="1">+1</button>
         <button class="valueChange" value="5">+5</button>
 
-        <select id="counterColor">
-            <option value="black">Black</option>
-            <option value="red">Red</option>
-            <option value="green">Green</option>
-            <option value="blue">Blue</option>
-        </select>
+        <div style="margin:20px;">
+            <select id="counterColor">
+                <option value="black">Black</option>
+                <option value="red">Red</option>
+                <option value="green">Green</option>
+                <option value="blue">Blue</option>
+            </select>
+        </div>
 
         <input type="text" id="setValue">
     </div>
